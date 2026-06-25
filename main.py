@@ -141,6 +141,7 @@ def login_and_register(page: ft.Page, main_container: ft.Container):
             spacing=40,
             controls=[
                 ft.Text("Hello, Friend !", size=36, weight=ft.FontWeight.BOLD, color="#ffffff"),
+                ft.Text("没有账号？点击下方 注册 按钮", size=15, color="#ffffff"),
                 ft.Text("注册您的个人资料，即可进入网站", size=15, color="#ffffff"),
                 ft.Button(
                     content=ft.Text("注" + " " * 8 + "册", size=20, weight=ft.FontWeight.BOLD),
@@ -178,7 +179,8 @@ def login_and_register(page: ft.Page, main_container: ft.Container):
             spacing=40,
             controls=[
                 ft.Text("Welcome Back !", size=36, weight=ft.FontWeight.BOLD, color="#ffffff"),
-                ft.Text("请输入您的个人信息,以使用网站的全部功能", size=15, color="#ffffff"),
+                ft.Text("已有账号？点击下方 登录 按钮", size=15, color="#ffffff"),
+                ft.Text("输入您的账号信息,就可以进入网站啦", size=15, color="#ffffff"),
                 ft.Button(
                     content=ft.Text("登" + " " * 8 + "录", size=20, weight=ft.FontWeight.BOLD),
                     bgcolor="#5137aa",
