@@ -1,10 +1,13 @@
 
 import flet as ft
 
-icons_path = ["./icon_svg/google-plus-g.svg",
-              "./icon_svg/facebook-f.svg",
-              "./icon_svg/github.svg",
-              "./icon_svg/linkedin-in.svg"]
+icons_path = [
+    "icon_svg/google-plus-g.svg",
+    "icon_svg/facebook-f.svg",
+    "icon_svg/github.svg",
+    "icon_svg/linkedin-in.svg"
+]
+
 
 def social_icons():
     return ft.Row(
@@ -53,7 +56,7 @@ def toggle_view(page: ft.Page, container: ft.Container, target_view: str):
 
 
 def login_and_register(page: ft.Page, main_container: ft.Container):
-    """ 创建登录注册页面 """
+    """ 创建 登录 注册 页面 """
 
     # 登录表单
     sign_in_form = ft.Container(
@@ -125,7 +128,7 @@ def login_and_register(page: ft.Page, main_container: ft.Container):
         )
     )
 
-    # 切换为注册页面  (右侧)
+    # 切换到注册页面  (右侧)
     sign_up_panel = ft.Container(
         width=400,
         height=460,
@@ -141,10 +144,10 @@ def login_and_register(page: ft.Page, main_container: ft.Container):
             spacing=40,
             controls=[
                 ft.Text("Hello, Friend !", size=36, weight=ft.FontWeight.BOLD, color="#ffffff"),
-                ft.Text("没有账号？点击下方 注册 按钮", size=15, color="#ffffff"),
+                ft.Text("没有账号？点击下方 去注册 按钮", size=15, color="#ffffff"),
                 ft.Text("注册您的个人资料，即可进入网站", size=15, color="#ffffff"),
                 ft.Button(
-                    content=ft.Text("注" + " " * 8 + "册", size=20, weight=ft.FontWeight.BOLD),
+                    content=ft.Text("去" + " " * 4 + "注" + " " * 4 + "册", size=20, weight=ft.FontWeight.BOLD),
                     bgcolor="#5137aa",
                     color="#ffffff",
                     style=ft.ButtonStyle(
@@ -163,7 +166,7 @@ def login_and_register(page: ft.Page, main_container: ft.Container):
         )
     )
 
-    # 切换为登录页面 (左侧)
+    # 切换到登录页面 (左侧)
     sign_in_panel = ft.Container(
         width=400,
         height=460,
@@ -179,10 +182,10 @@ def login_and_register(page: ft.Page, main_container: ft.Container):
             spacing=40,
             controls=[
                 ft.Text("Welcome Back !", size=36, weight=ft.FontWeight.BOLD, color="#ffffff"),
-                ft.Text("已有账号？点击下方 登录 按钮", size=15, color="#ffffff"),
+                ft.Text("已有账号？点击下方 去登录 按钮", size=15, color="#ffffff"),
                 ft.Text("输入您的账号信息,就可以进入网站啦", size=15, color="#ffffff"),
                 ft.Button(
-                    content=ft.Text("登" + " " * 8 + "录", size=20, weight=ft.FontWeight.BOLD),
+                    content=ft.Text("去" + " " * 4 + "登" + " " * 4 + "录", size=20, weight=ft.FontWeight.BOLD),
                     bgcolor="#5137aa",
                     color="#ffffff",
                     style=ft.ButtonStyle(
@@ -276,3 +279,6 @@ def main(page: ft.Page):
 
 if __name__ == "__main__":
     ft.run(main)
+
+    # 启动应用，并在 Web 中显示
+    #ft.run(main, view=ft.AppView.WEB_BROWSER,assets_dir="assets")
