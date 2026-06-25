@@ -1,11 +1,12 @@
 
 import flet as ft
 
+
 icons_path = [
-    "icon_svg/google-plus-g.svg",
-    "icon_svg/facebook-f.svg",
-    "icon_svg/github.svg",
-    "icon_svg/linkedin-in.svg"
+    "./icon_svg/google-plus-g.svg",
+    "./icon_svg/facebook-f.svg",
+    "./icon_svg/github.svg",
+    "./icon_svg/linkedin-in.svg"
 ]
 
 
@@ -28,7 +29,7 @@ def social_icons():
 
 
 def toggle_view(page: ft.Page, container: ft.Container, target_view: str):
-    """切换视图 - 实现滑动动画 """
+    """ 切换视图 - 实现滑动动画 """
     stack = container.content
     if not isinstance(stack, ft.Stack):
         return
@@ -280,5 +281,3 @@ def main(page: ft.Page):
 if __name__ == "__main__":
     ft.run(main)
 
-    # 启动应用，并在 Web 中显示
-    #ft.run(main, view=ft.AppView.WEB_BROWSER,assets_dir="assets")
